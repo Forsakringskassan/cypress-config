@@ -49,3 +49,8 @@ console.log(await esbuild.analyzeMetafile(result.metafile));
 
 apiExtractor("api-extractor.index.json");
 apiExtractor("api-extractor.support.json");
+
+/* monkey patch support file to include third-party plugins */
+const content = await fs.readFile("dist/support.d.ts", "utf8");
+const plugins = [`import "cypress-html-validate/commands";`].join("\n");
+await fs.writeFile("dist/support.d.ts", [plugins, content].join("\n\n"));

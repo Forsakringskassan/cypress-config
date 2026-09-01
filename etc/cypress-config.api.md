@@ -4,6 +4,34 @@
 
 ```ts
 
+import { ConfigData } from 'cypress-html-validate';
+import { CypressHtmlValidateOptions } from 'cypress-html-validate';
+import { defineConfig as defineConfig_2 } from 'cypress';
+
+// @public (undocumented)
+export type ConfigOptions = Parameters<typeof defineConfig_2>[0];
+
+// @public
+export const defaultConfig: Readonly<{
+    allowCypressEnv: false;
+    video: false;
+    component: {
+        devServer: {
+            framework: "vue";
+            bundler: "vite";
+        };
+        indexHtmlFile: string;
+    };
+}>;
+
+// @public (undocumented)
+export function defineConfig(userConfig?: Omit<ConfigOptions, "component"> & {
+    component?: Partial<ConfigOptions["component"]>;
+}): Readonly<ConfigOptions>;
+
+// @public
+export function htmlValidatePlugin(on: Cypress.PluginEvents, cypressConfig: Cypress.PluginConfigOptions, userConfig?: ConfigData, userOptions?: CypressHtmlValidateOptions): Promise<Cypress.PluginConfigOptions>;
+
 // (No @packageDocumentation comment for this package)
 
 ```

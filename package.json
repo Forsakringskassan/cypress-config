@@ -15,7 +15,14 @@
   },
   "license": "MIT",
   "author": "Försäkringskassan",
+  "sideEffects": [
+    "./dist/support.mjs",
+    "./src/support/html-validate.ts"
+  ],
   "type": "module",
+  "imports": {
+    "#assets/*": "./assets/*"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -28,6 +35,7 @@
   },
   "main": "dist/index.mjs",
   "files": [
+    "assets",
     "dist"
   ],
   "scripts": {
@@ -50,8 +58,13 @@
     "extends": "@forsakringskassan/commitlint-config/no-jira"
   },
   "prettier": "@forsakringskassan/prettier-config",
+  "dependencies": {
+    "cypress-html-validate": "9.0.0",
+    "deepmerge": "4.3.1"
+  },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.5",
+    "@fkui/vue": "6.55.0",
     "@forsakringskassan/commitlint-config": "4.2.8",
     "@forsakringskassan/eslint-config": "15.9.0",
     "@forsakringskassan/eslint-config-cli": "15.9.0",
@@ -67,12 +80,15 @@
     "@typescript/native": "npm:typescript@7.0.2",
     "cypress": "15.21.1",
     "esbuild": "0.28.2",
+    "html-validate": "11.10.0",
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.2.4",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   },
   "peerDependencies": {
-    "cypress": "^15.0.0"
+    "@fkui/vue": ">= 6.0.0",
+    "cypress": "^15.0.0",
+    "html-validate": ">= 8.0.0"
   },
   "engines": {
     "node": "^22.16 || >= 24",
@@ -83,5 +99,7 @@
     "esbuild": true,
     "unrs-resolver": true
   },
-  "externalDependencies": []
+  "externalDependencies": [
+    "cypress-html-validate"
+  ]
 }
