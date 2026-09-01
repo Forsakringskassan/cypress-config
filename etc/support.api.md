@@ -4,6 +4,13 @@
 
 ```ts
 
+// @public
+export function configure(options: {
+    afterEach: {
+        htmlvalidate: boolean;
+    };
+}): void;
+
 // (No @packageDocumentation comment for this package)
 
 ```
