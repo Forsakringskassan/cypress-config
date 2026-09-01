@@ -2,7 +2,9 @@ name: Release
 concurrency: release-${{ github.ref }}
 
 on:
-    workflow_dispatch:
+    push:
+        branches:
+            - main
 
 permissions:
     contents: write
@@ -19,8 +21,3 @@ jobs:
             config-preset: "@forsakringskassan/semantic-release-config"
         secrets:
             app-key: ${{ secrets.RELEASE_APP_KEY }}
-
-    deploy-documentation:
-        needs: [release]
-        name: Deploy new documentation
-        uses: ./.github/workflows/docs.yml
