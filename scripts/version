@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Finds all files matching any of the patterns and replaces the %version%
+# placeholder with the actual version from the new release.
+
+while IFS= read -r -d $'\0' file; do
+	if sed "s/%version%/v${npm_new_version}/gw /dev/stdout" -i "${file}" | grep -q .; then
+		echo "${file}"
+		git add "${file}"
+	fi
+done < <(git ls-files '*.md' '*.ts')

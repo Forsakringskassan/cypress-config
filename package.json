@@ -38,7 +38,9 @@
     "prepublishOnly": "release-prepublish --bundle",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "scripts/version",
+    "postversion": "npm run build"
   },
   "commitlint": {
     "extends": "@forsakringskassan/commitlint-config/no-jira"
