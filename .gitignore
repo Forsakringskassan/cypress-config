@@ -1,0 +1,6 @@
+*.tgz
+.eslintcache
+node_modules/
+coverage/
+dist/
+temp/

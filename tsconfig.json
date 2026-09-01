@@ -1,0 +1,20 @@
+{
+    "$schema": "https://www.schemastore.org/tsconfig",
+    "extends": [
+        "@tsconfig/recommended",
+        "@tsconfig/node22",
+        "@tsconfig/strictest"
+    ],
+    "compilerOptions": {
+        "rootDir": ".",
+        "outDir": "dist",
+        "emitDeclarationOnly": true,
+        "declaration": true,
+        "declarationDir": "temp/types",
+        "declarationMap": true,
+        "module": "esnext",
+        "moduleResolution": "bundler"
+    },
+    "include": ["**/*.ts", "**/*.mts"],
+    "exclude": ["dist/**", "node_modules/**", "temp/**"]
+}

@@ -1,0 +1,26 @@
+name: Release
+concurrency: release-${{ github.ref }}
+
+on:
+    workflow_dispatch:
+
+permissions:
+    contents: write
+    issues: write
+    pull-requests: write
+    id-token: write
+
+jobs:
+    release:
+        name: Release
+        uses: Forsakringskassan/.github/.github/workflows/npm-release.yaml@d1349e6aa4ed2c4d3d0c0da328f831472102dee1 # main
+        with:
+            app-id: ${{ vars.RELEASE_APP_ID }}
+            config-preset: "@forsakringskassan/semantic-release-config"
+        secrets:
+            app-key: ${{ secrets.RELEASE_APP_KEY }}
+
+    deploy-documentation:
+        needs: [release]
+        name: Deploy new documentation
+        uses: ./.github/workflows/docs.yml

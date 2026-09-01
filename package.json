@@ -1,0 +1,81 @@
+{
+  "name": "@forsakringskassan/cypress-config",
+  "version": "0.0.0",
+  "description": "Sharable Cypress configuration building blocks for Försäkringskassan",
+  "keywords": [
+    "cypress"
+  ],
+  "homepage": "https://github.com/Forsakringskassan/cypress-config#readme",
+  "bugs": {
+    "url": "https://github.com/Forsakringskassan/cypress-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forsakringskassan/cypress-config.git"
+  },
+  "license": "MIT",
+  "author": "Försäkringskassan",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "attw": "attw --no-emoji --profile esm-only --pack .",
+    "prebuild": "tsc",
+    "build": "node build.mts",
+    "eslint": "eslint --cache .",
+    "eslint:fix": "eslint --fix .",
+    "prepack": "release-prepack --bundle",
+    "postpack": "release-postpack",
+    "prepare": "commitlint-config",
+    "prepublishOnly": "release-prepublish --bundle",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "commitlint": {
+    "extends": "@forsakringskassan/commitlint-config/no-jira"
+  },
+  "prettier": "@forsakringskassan/prettier-config",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.5",
+    "@forsakringskassan/commitlint-config": "4.2.8",
+    "@forsakringskassan/eslint-config": "15.8.13",
+    "@forsakringskassan/eslint-config-cli": "15.8.9",
+    "@forsakringskassan/eslint-config-typescript": "15.8.14",
+    "@forsakringskassan/eslint-config-typescript-typeinfo": "15.8.14",
+    "@forsakringskassan/prettier-config": "3.7.8",
+    "@html-validate/release-scripts": "7.6.8",
+    "@microsoft/api-extractor": "7.59.0",
+    "@tsconfig/node22": "22.0.6",
+    "@tsconfig/recommended": "1.0.13",
+    "@tsconfig/strictest": "2.0.8",
+    "@types/node": "22.20.1",
+    "@typescript/native": "npm:typescript@7.0.2",
+    "cypress": "15.21.1",
+    "esbuild": "0.28.2",
+    "is-ci": "4.1.0",
+    "npm-pkg-lint": "5.2.4",
+    "typescript": "npm:@typescript/typescript6@6.0.2"
+  },
+  "peerDependencies": {
+    "cypress": "^15.0.0"
+  },
+  "engines": {
+    "node": "^22.16 || >= 24",
+    "npm": ">= 7"
+  },
+  "allowScripts": {
+    "cypress": true,
+    "esbuild": true,
+    "unrs-resolver": true
+  },
+  "externalDependencies": []
+}
