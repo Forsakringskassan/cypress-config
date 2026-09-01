@@ -31,7 +31,10 @@ function apiExtractor(filename: string): void {
 await fs.rm("dist", { recursive: true, force: true });
 
 const result = await esbuild.build({
-    entryPoints: ["src/index.ts"],
+    entryPoints: [
+        { in: "src/index.ts", out: "index" },
+        { in: "src/support/index.ts", out: "support" },
+    ],
     outdir: "dist",
     bundle: true,
     metafile: true,
@@ -44,4 +47,5 @@ const result = await esbuild.build({
 });
 console.log(await esbuild.analyzeMetafile(result.metafile));
 
-apiExtractor("api-extractor.json");
+apiExtractor("api-extractor.index.json");
+apiExtractor("api-extractor.support.json");

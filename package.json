@@ -20,6 +20,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.mjs"
+    },
+    "./support": {
+      "types": "./dist/support.d.ts",
+      "default": "./dist/support.mjs"
     }
   },
   "main": "dist/index.mjs",
