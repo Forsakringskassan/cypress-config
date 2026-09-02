@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.5",
-    "@fkui/vue": "6.55.0",
+    "@fkui/vue": "6.56.0",
     "@forsakringskassan/commitlint-config": "4.2.8",
     "@forsakringskassan/eslint-config": "15.9.0",
     "@forsakringskassan/eslint-config-cli": "15.9.0",
