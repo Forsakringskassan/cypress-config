@@ -5,6 +5,8 @@ type ConfigOptions = Parameters<typeof defineConfig>[0];
 
 const require = createRequire(import.meta.url);
 
+const isGithub = Boolean(process.env["GITHUB_ACTION"]);
+
 /**
  * Default cypress configuration.
  *
@@ -17,6 +19,17 @@ export const defaultConfig = Object.freeze({
     /* disable video recording, it is to slow both on remote machines and on
      * CI/CD testing. */
     video: false,
+
+    /* reporter configuration */
+    reporter: require.resolve("mocha-multi-reporters"),
+    reporterOptions: {
+        reporterEnabled: isGithub
+            ? "spec, github-actions, mocha-junit-reporter"
+            : "spec, mocha-junit-reporter",
+        mochaJunitReporterReporterOptions: {
+            mochaFile: "test-results/cypress-test-output_[hash].xml",
+        },
+    },
 
     component: {
         devServer: {

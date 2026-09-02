@@ -63,7 +63,8 @@
   },
   "dependencies": {
     "cypress-html-validate": "9.0.0",
-    "deepmerge": "4.3.1"
+    "deepmerge": "4.3.1",
+    "mocha-multi-reporters": "1.5.1"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.5",
@@ -107,6 +108,7 @@
     "unrs-resolver": true
   },
   "externalDependencies": [
-    "cypress-html-validate"
+    "cypress-html-validate",
+    "mocha-multi-reporters"
   ]
 }

@@ -2,6 +2,18 @@
 
 Sharable Cypress configuration building blocks for Försäkringskassan.
 
+## Install
+
+```bash
+npm install --save-dev @forsakringskassan/cypress-config
+```
+
+If you previously had these packages installed, they can be uninstalled:
+
+```bash
+npm rm mocha-multi-reporter
+```
+
 ## Usage
 
 In `cypress.config.ts`, replace the vanilla `defineConfig()` helper from `cypress` with `@forsakringskassan/cypress-config` and pass in `import.meta.dirname` as the first parameter:
