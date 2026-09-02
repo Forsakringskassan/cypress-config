@@ -1,5 +1,3 @@
-import "cypress";
-
 /**
  * Configure plugins.
  *
