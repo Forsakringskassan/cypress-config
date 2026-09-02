@@ -15,6 +15,13 @@ export type ConfigOptions = Parameters<typeof defineConfig_2>[0];
 export const defaultConfig: Readonly<{
     allowCypressEnv: false;
     video: false;
+    reporter: string;
+    reporterOptions: {
+        reporterEnabled: string;
+        mochaJunitReporterReporterOptions: {
+            mochaFile: string;
+        };
+    };
     component: {
         devServer: {
             framework: "vue";

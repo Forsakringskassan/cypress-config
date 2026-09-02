@@ -26,6 +26,6 @@ jobs:
             - name: npm-pkg-lint
               uses: ext/npm-pkg-lint@3302780a68362bcbd28d78fef340f5d40ad93f3a # v5.2.4
               with:
-                  allow-dependencies: cypress-html-validate
+                  allow-dependencies: cypress-html-validate,mocha-multi-reporters
             - name: attw
               run: npm run attw
