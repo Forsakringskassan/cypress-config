@@ -20,6 +20,9 @@ export const defaultConfig = Object.freeze({
      * CI/CD testing. */
     video: false,
 
+    /* use chrome instead of electron as default browser */
+    defaultBrowser: "chrome",
+
     /* reporter configuration */
     reporter: require.resolve("mocha-multi-reporters"),
     reporterOptions: {
