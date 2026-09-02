@@ -15,6 +15,7 @@ export type ConfigOptions = Parameters<typeof defineConfig_2>[0];
 export const defaultConfig: Readonly<{
     allowCypressEnv: false;
     video: false;
+    defaultBrowser: string;
     reporter: string;
     reporterOptions: {
         reporterEnabled: string;
