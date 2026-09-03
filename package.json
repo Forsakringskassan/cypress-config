@@ -17,6 +17,7 @@
   "author": "Försäkringskassan",
   "sideEffects": [
     "./dist/support.mjs",
+    "./src/support/axe.ts",
     "./src/support/html-validate.ts"
   ],
   "type": "module",
@@ -62,6 +63,7 @@
     "extends": "@forsakringskassan/semantic-release-config"
   },
   "dependencies": {
+    "@forsakringskassan/cypress-axe": "5.1.5",
     "cypress-html-validate": "9.0.0",
     "deepmerge": "4.3.1",
     "mocha-multi-reporters": "1.5.1"
