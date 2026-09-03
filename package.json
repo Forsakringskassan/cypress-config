@@ -71,6 +71,7 @@
     "@forsakringskassan/commitlint-config": "4.2.8",
     "@forsakringskassan/eslint-config": "15.9.0",
     "@forsakringskassan/eslint-config-cli": "15.9.0",
+    "@forsakringskassan/eslint-config-cypress": "15.9.0",
     "@forsakringskassan/eslint-config-typescript": "15.9.0",
     "@forsakringskassan/eslint-config-typescript-typeinfo": "15.9.0",
     "@forsakringskassan/prettier-config": "3.7.8",
@@ -81,16 +82,18 @@
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "22.20.1",
     "@typescript/native": "npm:typescript@7.0.2",
+    "@vitejs/plugin-vue": "6.0.8",
     "cypress": "15.21.1",
     "esbuild": "0.28.2",
     "html-validate": "11.10.0",
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.2.4",
-    "typescript": "npm:@typescript/typescript6@6.0.2"
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "vite": "8.2.2"
   },
   "peerDependencies": {
     "@fkui/vue": ">= 6.0.0",
-    "cypress": "^15.0.0",
+    "cypress": "^15.17.0",
     "html-validate": ">= 8.0.0"
   },
   "engines": {
@@ -100,6 +103,7 @@
   "allowScripts": {
     "cypress": true,
     "esbuild": true,
+    "fsevents": false,
     "unrs-resolver": true
   },
   "externalDependencies": [

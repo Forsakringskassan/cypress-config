@@ -13,7 +13,13 @@
         "declarationDir": "temp/types",
         "declarationMap": true,
         "module": "esnext",
-        "moduleResolution": "bundler"
+        "moduleResolution": "bundler",
+        "paths": {
+            "@forsakringskassan/cypress-config/support": [
+                "./src/support/index.ts"
+            ],
+            "@forsakringskassan/cypress-config": ["./src/index.ts"]
+        }
     },
     "include": ["**/*.ts", "**/*.mts"],
     "exclude": ["dist/**", "node_modules/**", "temp/**"]
