@@ -10,8 +10,10 @@ export type ConfigOptions = Parameters<typeof cypressDefineConfig>[0];
 /**
  * @public
  * @since %version%
+ * @param _rootDir - path to the root directory (containing the `cypress.config.ts` file).
  */
 export function defineConfig(
+    _rootDir: string,
     userConfig?: Omit<ConfigOptions, "component"> & {
         component?: Partial<ConfigOptions["component"]>;
     },

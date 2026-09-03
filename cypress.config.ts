@@ -3,7 +3,7 @@ import {
     htmlValidatePlugin,
 } from "@forsakringskassan/cypress-config";
 
-export default defineConfig({
+export default defineConfig(import.meta.dirname, {
     component: {
         async setupNodeEvents(on, config) {
             config = await htmlValidatePlugin(on, config);

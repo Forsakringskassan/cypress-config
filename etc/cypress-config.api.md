@@ -25,7 +25,7 @@ export const defaultConfig: Readonly<{
 }>;
 
 // @public (undocumented)
-export function defineConfig(userConfig?: Omit<ConfigOptions, "component"> & {
+export function defineConfig(_rootDir: string, userConfig?: Omit<ConfigOptions, "component"> & {
     component?: Partial<ConfigOptions["component"]>;
 }): Readonly<ConfigOptions>;
 
