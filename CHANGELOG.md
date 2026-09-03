@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.3.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.2.0...v1.3.0) (2026-09-03)
+
+### Features
+
+* add `docsGeneratorPlugin` to expose manifest from `@forsakringskassan/docs-generator` ([b91ecd9](https://github.com/Forsakringskassan/cypress-config/commit/b91ecd9c44305aeb7e7e78b556618a324afdba66))
+
 ## [1.2.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.1.0...v1.2.0) (2026-09-03)
 
 ### Features

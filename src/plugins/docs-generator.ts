@@ -5,7 +5,7 @@ import { type Manifest } from "@forsakringskassan/docs-generator";
  * `@forsakringskassan/docs-generator`.
  *
  * @public
- * @since %version%
+ * @since v1.3.0
  * @param on - Cypress `on` callback from `setupNodeEvents`.
  * @param config - Cypress `config` parameter from `setupNodeEvents`.
  * @param docs - A `Generator` instance.
