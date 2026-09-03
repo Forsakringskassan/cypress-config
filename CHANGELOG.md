@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [1.2.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.1.0...v1.2.0) (2026-09-03)
+
+### Features
+
+* include reporter config ([1181248](https://github.com/Forsakringskassan/cypress-config/commit/118124863f93ce3dd40a8b875b648649d719e186))
+
+### Bug Fixes
+
+* use chrome as default browser ([0c0b6e1](https://github.com/Forsakringskassan/cypress-config/commit/0c0b6e1c97645b6d4fc97220b85e1bfde73ba6b0))
+
 ## [1.1.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.0.1...v1.1.0) (2026-09-03)
 
 ### Features
