@@ -2,7 +2,7 @@
  * Configure plugins.
  *
  * @public
- * @since %version%
+ * @since v1.1.0
  */
 export function configure(options: {
     afterEach: { htmlvalidate: boolean };

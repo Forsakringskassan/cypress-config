@@ -9,7 +9,7 @@ const require = createRequire(import.meta.url);
  * Default cypress configuration.
  *
  * @public
- * @since %version%
+ * @since v1.1.0
  */
 export const defaultConfig = Object.freeze({
     allowCypressEnv: false,

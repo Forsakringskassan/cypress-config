@@ -60,7 +60,7 @@ const htmlValidateOptions = (): CypressHtmlValidateOptions => {
  * Preconfigured `cypress-html-validate` plugin.
  *
  * @public
- * @since %version%
+ * @since v1.1.0
  * @param on - Cypress `on` callback from `setupNodeEvents`.
  * @param cypressConfig - Cypress `config` parameter from `setupNodeEvents`.
  * @param userConfig - Custom configuration to pass to `html-validate`.
