@@ -15,6 +15,7 @@ npm rm mocha-multi-reporter
 ```
 
 - [Usage](#usage)
+- [Axe](#axe)
 - [docs-generator](#docs-generator)
 - [HTML-Validate](#html-validate)
 
@@ -62,6 +63,25 @@ configure({
 > Calling it multiple times is undefined behaviour.
 
 See the various components for details.
+
+### Axe
+
+A preconfigured [Axe](https://github.com/dequelabs/axe-core) plugin ([@forsakringskassan/cypress-axe](https://github.com/Forsakringskassan/cypress-axe/)) is exported as `axePlugin`:
+
+```ts
+import { defineConfig, axePlugin } from "@forsakringskassan/cypress-config";
+
+export default defineConfig(import.meta.dirname, {
+    component: {
+        async setupNodeEvents(on, config) {
+            config = await axePlugin(on, config);
+            return config;
+        },
+    },
+});
+```
+
+Automatic validation after each test cannot currently be disabled.
 
 ### docs-generator
 
@@ -113,6 +133,7 @@ export default defineConfig(import.meta.dirname, {
     component: {
         async setupNodeEvents(on, config) {
             config = await htmlValidatePlugin(on, config);
+            return config;
         },
     },
 });

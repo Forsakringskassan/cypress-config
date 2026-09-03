@@ -8,6 +8,9 @@ import { ConfigData } from 'cypress-html-validate';
 import { CypressHtmlValidateOptions } from 'cypress-html-validate';
 import { defineConfig as defineConfig_2 } from 'cypress';
 
+// @public
+export function axePlugin(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions, userOptions?: object): Promise<Cypress.PluginConfigOptions>;
+
 // @public (undocumented)
 export type ConfigOptions = Parameters<typeof defineConfig_2>[0];
 
