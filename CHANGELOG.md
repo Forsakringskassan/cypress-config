@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.4.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.3.0...v1.4.0) (2026-09-03)
+
+### Features
+
+* support axe ([ee54a12](https://github.com/Forsakringskassan/cypress-config/commit/ee54a1293258b35698576d2c3749111ddaa96324))
+
 ## [1.3.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.2.0...v1.3.0) (2026-09-03)
 
 ### Features

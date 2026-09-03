@@ -18,7 +18,7 @@ const defaultOptions = {
  * Preconfigured `@forsakringskassan/cypress-axe` plugin.
  *
  * @public
- * @since %version%
+ * @since v1.4.0
  * @param on - Cypress `on` callback from `setupNodeEvents`.
  * @param config - Cypress `config` parameter from `setupNodeEvents`.
  * @param userOptions - Custom configuration to pass to `@forsakringskassan/cypress-axe`.
