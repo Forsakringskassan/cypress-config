@@ -38,6 +38,11 @@ export function defineConfig(_rootDir: string, userConfig?: Omit<ConfigOptions, 
 }): Readonly<ConfigOptions>;
 
 // @public
+export function docsGeneratorPlugin<T extends unknown[]>(_on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions, docs: {
+    manifest(sourceFiles: T): Promise<unknown>;
+}, sourceFiles: T): Promise<Cypress.PluginConfigOptions>;
+
+// @public
 export function htmlValidatePlugin(on: Cypress.PluginEvents, cypressConfig: Cypress.PluginConfigOptions, userConfig?: ConfigData, userOptions?: CypressHtmlValidateOptions): Promise<Cypress.PluginConfigOptions>;
 
 // (No @packageDocumentation comment for this package)

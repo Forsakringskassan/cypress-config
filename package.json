@@ -70,6 +70,7 @@
     "@arethetypeswrong/cli": "0.18.5",
     "@fkui/vue": "6.56.0",
     "@forsakringskassan/commitlint-config": "4.2.8",
+    "@forsakringskassan/docs-generator": "3.6.2",
     "@forsakringskassan/eslint-config": "15.9.0",
     "@forsakringskassan/eslint-config-cli": "15.9.0",
     "@forsakringskassan/eslint-config-cypress": "15.9.0",
@@ -94,14 +95,21 @@
   },
   "peerDependencies": {
     "@fkui/vue": ">= 6.0.0",
+    "@forsakringskassan/docs-generator": "^3.0.0",
     "cypress": "^15.17.0",
     "html-validate": ">= 8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@forsakringskassan/docs-generator": {
+      "optional": true
+    }
   },
   "engines": {
     "node": "^22.16 || >= 24",
     "npm": ">= 7"
   },
   "allowScripts": {
+    "@parcel/watcher": false,
     "cypress": true,
     "esbuild": true,
     "fsevents": false,
