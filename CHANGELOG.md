@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.4.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.4.0...v1.4.1) (2026-09-05)
+
+### Bug Fixes
+
+* **deps:** update dependency cypress-html-validate to v9.1.0 ([f359ebf](https://github.com/Forsakringskassan/cypress-config/commit/f359ebf2678aa46183ec7181a8b4fc9723647e97))
+
 ## [1.4.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.3.0...v1.4.0) (2026-09-03)
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "@forsakringskassan/cypress-config",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Sharable Cypress configuration building blocks for Försäkringskassan",
   "keywords": [
     "cypress"
