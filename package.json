@@ -87,7 +87,7 @@
     "@types/node": "22.20.1",
     "@typescript/native": "npm:typescript@7.0.2",
     "@vitejs/plugin-vue": "6.0.8",
-    "cypress": "15.21.1",
+    "cypress": "16.0.0",
     "esbuild": "0.28.2",
     "html-validate": "11.12.0",
     "is-ci": "4.1.0",
@@ -98,7 +98,7 @@
   "peerDependencies": {
     "@fkui/vue": ">= 6.0.0",
     "@forsakringskassan/docs-generator": "^3.0.0",
-    "cypress": "^15.17.0",
+    "cypress": "^15.17.0 || ^16.0.0",
     "html-validate": ">= 8.0.0"
   },
   "peerDependenciesMeta": {
