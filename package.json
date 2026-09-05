@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@forsakringskassan/cypress-axe": "5.1.5",
-    "cypress-html-validate": "9.0.0",
+    "cypress-html-validate": "9.1.0",
     "deepmerge": "4.3.1",
     "mocha-multi-reporters": "1.5.1"
   },
