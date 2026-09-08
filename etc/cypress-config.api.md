@@ -15,8 +15,8 @@ export function axePlugin(on: Cypress.PluginEvents, config: Cypress.PluginConfig
 export type ConfigOptions = Parameters<typeof defineConfig_2>[0];
 
 // @public
-export const defaultConfig: Readonly<{
-    allowCypressEnv: false;
+export function defaultConfig(cypressMajor: string | undefined): Readonly<{
+    allowCypressEnv?: false;
     video: false;
     defaultBrowser: string;
     reporter: string;
