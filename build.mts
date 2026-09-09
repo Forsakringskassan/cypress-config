@@ -21,10 +21,24 @@ async function extractAugmentations(
     const matches = content.matchAll(
         /^\/\*\* module augmentation:(\S+) \*\/\n(declare global \{[\s\S]+?^\})$/gm,
     );
-    return Array.from(matches, (it) => {
+
+    const augmentations = Array.from(matches, (it) => {
         const [, filename = "", content = ""] = it;
         return { filename, content };
     });
+
+    // pull augmentations from `src/*/augmnetations.ts`
+    const { base, dir } = path.parse(filename);
+    if (base === "augmentations.d.ts") {
+        const content = await fs.readFile(filename, "utf8");
+        const stripped = content.replace(/^\/\/# sourceMappingURL=.*$/m, "");
+        augmentations.push({
+            filename: `${path.basename(dir)}.d.ts`,
+            content: stripped,
+        });
+    }
+
+    return augmentations;
 }
 
 /**
@@ -110,11 +124,3 @@ console.log(await esbuild.analyzeMetafile(result.metafile));
 
 await apiExtractor("api-extractor.index.json");
 await apiExtractor("api-extractor.support.json");
-
-/* monkey patch support file to include third-party plugins */
-const content = await fs.readFile("dist/support.d.ts", "utf8");
-const plugins = [
-    `import "@forsakringskassan/cypress-axe/support";`,
-    `import "cypress-html-validate/commands";`,
-].join("\n");
-await fs.writeFile("dist/support.d.ts", [plugins, content].join("\n\n"));
