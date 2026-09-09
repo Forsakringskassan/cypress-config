@@ -11,7 +11,10 @@ npm install --save-dev @forsakringskassan/cypress-config
 If you previously had these packages installed, they can be uninstalled:
 
 ```bash
-npm rm mocha-multi-reporter
+npm rm \
+  @forsakringskassan/cypress-axe \
+  cypress-html-validate \
+  mocha-multi-reporter
 ```
 
 - [Usage](#usage)
