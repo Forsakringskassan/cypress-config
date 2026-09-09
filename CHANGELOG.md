@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.5.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.5.0...v1.5.1) (2026-09-09)
+
+### Bug Fixes
+
+* **deps:** `@forsakringskassan/cypress-axe` must be external for `axe-core` to work ([705cd32](https://github.com/Forsakringskassan/cypress-config/commit/705cd32a2abd5fdcd2d397bb72c06b7b955b8409))
+
 ## [1.5.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.4.1...v1.5.0) (2026-09-08)
 
 ### Features
