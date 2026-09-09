@@ -1,0 +1,60 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-weight: normal;
+    background: var(--background);
+    color: var(--foreground);
+}
+
+h1 {
+    text-shadow: 5px 5px 5px light-dark(rgb(0 0 0 / 50%), rgb(255 255 255 / 50%));
+}
+
+.box {
+    padding: 1rem;
+    border: 3px dashed var(--border);
+}
+
+[data-prefers-color-scheme],
+[data-forced-colors] {
+    display: none;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --foreground: #333;
+        --background: #eee;
+        --border: #f00;
+    }
+
+    [data-prefers-color-scheme="light"] {
+        display: initial;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground: #eee;
+        --background: #333;
+        --border: #f00;
+    }
+
+    [data-prefers-color-scheme="dark"] {
+        display: initial;
+    }
+}
+
+@media (forced-colors: none) {
+    [data-forced-colors="none"] {
+        display: initial;
+    }
+}
+
+@media (forced-colors: active) {
+    [data-forced-colors="active"] {
+        display: initial;
+    }
+}

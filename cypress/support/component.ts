@@ -1,7 +1,9 @@
 import { configure } from "@forsakringskassan/cypress-config/support";
 import { mount } from "cypress/vue";
+import "./component.scss";
 
 configure({
+    resetEmulatedMedia: true,
     afterEach: {
         htmlvalidate: true,
     },

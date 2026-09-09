@@ -6,6 +6,7 @@
 
 // @public
 export function configure(options: {
+    resetEmulatedMedia: boolean;
     afterEach: {
         htmlvalidate: boolean;
     };
