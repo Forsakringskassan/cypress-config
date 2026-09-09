@@ -37,7 +37,8 @@
   "main": "dist/index.mjs",
   "files": [
     "assets",
-    "dist"
+    "dist",
+    "*.d.ts"
   ],
   "scripts": {
     "attw": "attw --no-emoji --profile esm-only --pack .",
