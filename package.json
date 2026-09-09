@@ -17,8 +17,8 @@
   "author": "Försäkringskassan",
   "sideEffects": [
     "./dist/support.mjs",
-    "./src/support/axe.ts",
-    "./src/support/html-validate.ts"
+    "./src/commands/*",
+    "./src/support/*"
   ],
   "type": "module",
   "imports": {
@@ -93,7 +93,8 @@
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.2.5",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "vite": "8.2.2"
+    "vite": "8.2.2",
+    "vue": "3.5.42"
   },
   "peerDependencies": {
     "@fkui/vue": ">= 6.0.0",

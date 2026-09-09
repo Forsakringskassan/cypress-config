@@ -14,6 +14,7 @@
         "declarationMap": true,
         "module": "esnext",
         "moduleResolution": "bundler",
+        "types": ["node", "cypress", "vite/client"],
         "allowImportingTsExtensions": true,
         "paths": {
             "@forsakringskassan/cypress-config/support": [
