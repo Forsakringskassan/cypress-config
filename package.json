@@ -118,6 +118,7 @@
     "unrs-resolver": true
   },
   "externalDependencies": [
+    "@forsakringskassan/cypress-axe",
     "cypress-html-validate",
     "mocha-multi-reporters"
   ]
