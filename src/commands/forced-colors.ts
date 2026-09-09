@@ -13,7 +13,7 @@ declare global {
              * cy.forcedColors("active");
              * ```
              *
-             * @since %version%
+             * @since v1.6.0
              * @param mode - "active" to enable, "none" to disable.
              */
             forcedColors(mode: "none" | "active"): Cypress.Chainable<void>;

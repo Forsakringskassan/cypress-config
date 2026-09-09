@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.6.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.5.1...v1.6.0) (2026-09-09)
+
+### Features
+
+* add `cy.forcedColors()` and `cy.prefersColorScheme()` ([421bab3](https://github.com/Forsakringskassan/cypress-config/commit/421bab30b1ce8ab4e8ac019532bee2ea0bbf6324))
+
 ## [1.5.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.5.0...v1.5.1) (2026-09-09)
 
 ### Bug Fixes

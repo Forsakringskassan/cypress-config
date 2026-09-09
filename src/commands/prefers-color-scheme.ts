@@ -13,7 +13,7 @@ declare global {
              * cy.prefersColorScheme("dark");
              * ```
              *
-             * @since %version%
+             * @since v1.6.0
              * @param value - "light" or "dark" color mode, "none" will disable.
              */
             prefersColorScheme(
