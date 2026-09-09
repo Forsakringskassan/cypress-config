@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.6.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.6.0...v1.6.1) (2026-09-09)
+
+### Bug Fixes
+
+* add `support.d.ts` shim ([d3378e0](https://github.com/Forsakringskassan/cypress-config/commit/d3378e0a43820e73375036b11747d197c0eb4797))
+
 ## [1.6.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.5.1...v1.6.0) (2026-09-09)
 
 ### Features
