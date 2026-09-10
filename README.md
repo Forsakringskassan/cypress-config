@@ -70,6 +70,33 @@ configure({
 - `resetEmulatedMedia` - When enabled, any emulated CSS media features will be reset between runs.
 - `afterEach` - Enables features to automatically run after each test. See the various components for details.
 
+For component tests a preconfigured `mount` function is available.
+It adds the following Vue plugins from `@fkui/vue`:
+
+- [`FormatPlugin`](https://designsystem.forsakringskassan.se/latest/functions/plugins/formatplugin.html)
+- [`TestPlugin`](https://designsystem.forsakringskassan.se/latest/functions/plugins/testplugin.html)
+- [`TranslationPlugin`](https://designsystem.forsakringskassan.se/latest/functions/plugins/translationplugin.html)
+- [`ValidationPlugin`](https://designsystem.forsakringskassan.se/latest/functions/plugins/validationplugin.html)
+
+To use, edit `cypress/support/component.ts`:
+
+```diff
+-import { mount } from "cypress/mount";
+-import { configure } from "@forsakringskassan/cypress-config/support";
++import { configure, mount } from "@forsakringskassan/cypress-config/support";
+
+ Cypress.Commands.add("mount", mount);
+```
+
+If you need further customization, wrap it in your own custom function:
+
+```ts
+Cypress.Commands.add("mount", (component, options = {}) => {
+    /* modify options as needed */
+    return mount(component, options);
+});
+```
+
 ### Commands
 
 This preset adds new custom commands:

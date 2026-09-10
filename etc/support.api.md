@@ -4,6 +4,8 @@
 
 ```ts
 
+import { mount as mount_2 } from 'cypress/vue';
+
 // @public
 export function configure(options: {
     resetEmulatedMedia: boolean;
@@ -11,6 +13,9 @@ export function configure(options: {
         htmlvalidate: boolean;
     };
 }): void;
+
+// @public
+export const mount: (component: Parameters<typeof mount_2>[0], options?: NonNullable<Parameters<typeof mount_2>[1]>) => ReturnType<typeof mount_2>;
 
 // (No @packageDocumentation comment for this package)
 

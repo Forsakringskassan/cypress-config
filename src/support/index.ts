@@ -4,3 +4,4 @@ import "../commands/forced-colors";
 import "../commands/prefers-color-scheme";
 
 export { configure } from "./configure";
+export { mount } from "./mount";
