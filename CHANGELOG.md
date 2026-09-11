@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.8.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.7.0...v1.8.0) (2026-09-11)
+
+### Features
+
+* configure teleport target for FKUI ([4919a7b](https://github.com/Forsakringskassan/cypress-config/commit/4919a7bb585cca71bb5c8144f9beb537a6576be4))
+
 ## [1.7.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.6.1...v1.7.0) (2026-09-11)
 
 ### Features
