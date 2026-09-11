@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.7.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.6.1...v1.7.0) (2026-09-11)
+
+### Features
+
+* add preconfigured `mount()` function for `cy.mount()` ([18695ed](https://github.com/Forsakringskassan/cypress-config/commit/18695ed7a3977266ef460f3351a0dc60e2141f3b))
+* include `cy.mount()` typings ([ff13a34](https://github.com/Forsakringskassan/cypress-config/commit/ff13a347332c77045c0d655a81b9d2dd78c062ca))
+
 ## [1.6.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.6.0...v1.6.1) (2026-09-09)
 
 ### Bug Fixes

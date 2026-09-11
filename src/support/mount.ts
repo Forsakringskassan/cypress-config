@@ -11,7 +11,7 @@ import {
  * Wrapper around `mount()` from `cypress/vue` with new defaults.
  *
  * @public
- * @since %version%
+ * @since v1.7.0
  */
 export const mount = (
     component: Parameters<typeof originalMount>[0],
