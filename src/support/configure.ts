@@ -1,3 +1,4 @@
+import { config } from "@fkui/vue";
 import {
     type UseEmulatedMedia,
     useEmulatedMedia,
@@ -28,6 +29,13 @@ export function configure(options: {
         htmlvalidate: boolean;
     };
 }): void {
+    /* When running component tests, configure FKUI to use the default teleport
+     * target from `assets/component-index.ts`. When running E2E we assume the
+     * application has configured this itself. */
+    if (Cypress.testingType === "component") {
+        config.teleportTarget = "#teleport";
+    }
+
     if (options.afterEach.htmlvalidate) {
         afterEach(() => {
             cy.htmlvalidate();
