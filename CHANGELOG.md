@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.8.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.8.0...v1.8.1) (2026-09-12)
+
+### Bug Fixes
+
+* **deps:** update dependency mocha-multi-reporters to v1.5.2 ([79113ef](https://github.com/Forsakringskassan/cypress-config/commit/79113ef004bd3dbd662eee3355a051fa03174fcb))
+
 ## [1.8.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.7.0...v1.8.0) (2026-09-11)
 
 ### Features
