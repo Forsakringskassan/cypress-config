@@ -94,7 +94,7 @@
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.2.5",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "vite": "8.2.2",
+    "vite": "8.3.0",
     "vue": "3.5.42"
   },
   "peerDependencies": {
