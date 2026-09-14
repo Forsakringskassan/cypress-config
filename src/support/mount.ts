@@ -26,7 +26,7 @@ export type MountFn = (
  * both!
  *
  * @public
- * @since %version%
+ * @since v1.9.0
  */
 export async function createMount(options?: {
     fkuiVue?: typeof FkuiVue;

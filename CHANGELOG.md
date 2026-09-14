@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.9.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.8.1...v1.9.0) (2026-09-14)
+
+### Features
+
+* allow passing in custom resolved `@fkui/vue` modules ([162e3cc](https://github.com/Forsakringskassan/cypress-config/commit/162e3cc05a3fc41c8d51d413fd807e618e6d4fda))
+
 ## [1.8.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.8.0...v1.8.1) (2026-09-12)
 
 ### Bug Fixes
