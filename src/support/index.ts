@@ -4,4 +4,4 @@ import "../commands/forced-colors";
 import "../commands/prefers-color-scheme";
 
 export { configure } from "./configure";
-export { mount } from "./mount";
+export { type MountFn, createMount, mount } from "./mount";

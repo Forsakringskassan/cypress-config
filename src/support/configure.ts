@@ -1,4 +1,4 @@
-import { config } from "@fkui/vue";
+import type * as FkuiVue from "@fkui/vue";
 import {
     type UseEmulatedMedia,
     useEmulatedMedia,
@@ -21,14 +21,18 @@ function resetEmulatedMedia(emulatedMedia: UseEmulatedMedia): void {
  * @public
  * @since v1.1.0
  */
-export function configure(options: {
+export async function configure(options: {
+    fkuiVue?: typeof FkuiVue;
+
     /** When enabled, any emulated CSS media features will be reset between runs */
     resetEmulatedMedia: boolean;
 
     afterEach: {
         htmlvalidate: boolean;
     };
-}): void {
+}): Promise<void> {
+    const { config } = options.fkuiVue ?? (await import("@fkui/vue"));
+
     /* When running component tests, configure FKUI to use the default teleport
      * target from `assets/component-index.ts`. When running E2E we assume the
      * application has configured this itself. */
