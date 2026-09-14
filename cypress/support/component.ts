@@ -1,7 +1,7 @@
 import { configure, mount } from "@forsakringskassan/cypress-config/support";
 import "./component.scss";
 
-configure({
+await configure({
     resetEmulatedMedia: true,
     afterEach: {
         htmlvalidate: true,

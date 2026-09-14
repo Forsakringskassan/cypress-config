@@ -54,7 +54,7 @@ A configuration function is available for usage in `cypress/support/e2e.ts` and/
 ```ts
 import { configure } from "@forsakringskassan/cypress-config/support";
 
-configure({
+await configure({
     resetEmulatedMedia: true,
     afterEach: {
         htmlvalidate: true,
@@ -95,6 +95,16 @@ Cypress.Commands.add("mount", (component, options = {}) => {
     /* modify options as needed */
     return mount(component, options);
 });
+```
+
+For advanced usage, use the `createMount()` call to create the `mount()` function manually:
+
+```ts
+import { createMount } from "@forsakringskassan/cypress-config/support";
+
+const mount = await createMount({/* options */});
+
+Cypress.Commands.add("mount", mount);
 ```
 
 ### Commands
@@ -209,7 +219,7 @@ To automatically run validation after each test configure it using the configura
 ```ts
 import { configure } from "@forsakringskassan/cypress-config/support";
 
-configure({
+await configure({
     resetEmulatedMedia: true,
     afterEach: {
         htmlvalidate: true,

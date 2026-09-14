@@ -4,18 +4,28 @@
 
 ```ts
 
+import type * as FkuiVue from '@fkui/vue';
 import { mount as mount_2 } from 'cypress/vue';
 
 // @public
 export function configure(options: {
+    fkuiVue?: typeof FkuiVue;
     resetEmulatedMedia: boolean;
     afterEach: {
         htmlvalidate: boolean;
     };
-}): void;
+}): Promise<void>;
 
 // @public
-export const mount: (component: Parameters<typeof mount_2>[0], options?: NonNullable<Parameters<typeof mount_2>[1]>) => ReturnType<typeof mount_2>;
+export function createMount(options?: {
+    fkuiVue?: typeof FkuiVue;
+}): Promise<MountFn>;
+
+// @public
+export const mount: MountFn;
+
+// @public (undocumented)
+export type MountFn = (component: Parameters<typeof mount_2>[0], options?: NonNullable<Parameters<typeof mount_2>[1]>) => ReturnType<typeof mount_2>;
 
 // (No @packageDocumentation comment for this package)
 
