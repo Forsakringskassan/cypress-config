@@ -57,6 +57,9 @@ export function defaultConfig(cypressMajor: string | undefined) {
                 bundler: "vite",
             },
             indexHtmlFile: require.resolve("#assets/component-index.html"),
+
+            /* cloneman puts cy-files in temp folder during build */
+            excludeSpecPattern: ["temp/**"],
         },
     } satisfies ConfigOptions);
 }
