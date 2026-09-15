@@ -14,7 +14,7 @@ If you previously had these packages installed, they can be uninstalled:
 npm rm \
   @forsakringskassan/cypress-axe \
   cypress-html-validate \
-  mocha-multi-reporter
+  mocha-multi-reporters
 ```
 
 - [Usage](#usage)
