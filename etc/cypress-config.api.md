@@ -32,6 +32,7 @@ export function defaultConfig(cypressMajor: string | undefined): Readonly<{
             bundler: "vite";
         };
         indexHtmlFile: string;
+        excludeSpecPattern: string[];
     };
 }>;
 
