@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.9.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.9.0...v1.9.1) (2026-09-15)
+
+### Bug Fixes
+
+* exclude tests in temp folder ([3a16995](https://github.com/Forsakringskassan/cypress-config/commit/3a16995cde603df1a9d9387252fe433bb82cd1af))
+
 ## [1.9.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.8.1...v1.9.0) (2026-09-14)
 
 ### Features
