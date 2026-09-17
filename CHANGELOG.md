@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.9.2](https://github.com/Forsakringskassan/cypress-config/compare/v1.9.1...v1.9.2) (2026-09-17)
+
+### Bug Fixes
+
+* import type json ([12495be](https://github.com/Forsakringskassan/cypress-config/commit/12495bec857d86102abb32cfa2e1e6933839e469))
+
 ## [1.9.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.9.0...v1.9.1) (2026-09-15)
 
 ### Bug Fixes
