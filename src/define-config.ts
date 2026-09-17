@@ -1,5 +1,5 @@
 import { type defineConfig as cypressDefineConfig } from "cypress";
-import pkg from "cypress/package.json";
+import pkg from "cypress/package.json" with { type: "json" };
 import { defaultConfig } from "./default-config";
 import { mergeConfig } from "./utils/merge-config";
 
