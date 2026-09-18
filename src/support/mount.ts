@@ -1,5 +1,6 @@
 import { mount as originalMount } from "cypress/vue";
 import type * as FkuiVue from "@fkui/vue";
+import { failOnWarningPlugin } from "./fail-on-warning-plugin";
 
 /** @public */
 export type MountFn = (
@@ -30,14 +31,17 @@ export type MountFn = (
  */
 export async function createMount(options?: {
     fkuiVue?: typeof FkuiVue;
+    failOnWarning?: boolean;
 }): Promise<MountFn> {
+    const { fkuiVue = await import("@fkui/vue"), failOnWarning = true } =
+        options ?? {};
     const {
         FormatPlugin,
         TestPlugin,
         TranslationPlugin,
         ValidationPlugin,
         setRunningContext,
-    } = options?.fkuiVue ?? (await import("@fkui/vue"));
+    } = fkuiVue;
     const plugins = [
         FormatPlugin,
         TestPlugin,
@@ -64,6 +68,11 @@ export async function createMount(options?: {
                 setRunningContext(app);
             },
         });
+
+        /* handle warnings as errors */
+        if (failOnWarning) {
+            options.global.plugins.push(failOnWarningPlugin());
+        }
 
         return originalMount(component, options);
     };
