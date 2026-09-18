@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.10.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.9.2...v1.10.0) (2026-09-18)
+
+### Features
+
+* fail tests on vue warnings ([870db06](https://github.com/Forsakringskassan/cypress-config/commit/870db0627ee2c3151529f9059282a68f0135a59f))
+
 ## [1.9.2](https://github.com/Forsakringskassan/cypress-config/compare/v1.9.1...v1.9.2) (2026-09-17)
 
 ### Bug Fixes

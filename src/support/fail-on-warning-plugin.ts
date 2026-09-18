@@ -4,7 +4,7 @@ import { type Plugin } from "vue";
  * Fails Cypress test if a Vue warning is encountered.
  *
  * @public
- * @since %version%
+ * @since v1.10.0
  */
 export function failOnWarningPlugin(): Plugin {
     return {
