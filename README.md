@@ -78,6 +78,10 @@ It adds the following Vue plugins from `@fkui/vue`:
 - [`TranslationPlugin`](https://designsystem.forsakringskassan.se/latest/functions/plugins/translationplugin.html)
 - [`ValidationPlugin`](https://designsystem.forsakringskassan.se/latest/functions/plugins/validationplugin.html)
 
+Additionally, it also:
+
+- Treats Vue warnings as errors.
+
 To use, edit `cypress/support/component.ts`:
 
 ```diff

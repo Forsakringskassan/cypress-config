@@ -6,6 +6,7 @@
 
 import type * as FkuiVue from '@fkui/vue';
 import { mount as mount_2 } from 'cypress/vue';
+import { Plugin } from 'vue';
 
 // @public
 export function configure(options: {
@@ -19,7 +20,11 @@ export function configure(options: {
 // @public
 export function createMount(options?: {
     fkuiVue?: typeof FkuiVue;
+    failOnWarning?: boolean;
 }): Promise<MountFn>;
+
+// @public
+export function failOnWarningPlugin(): Plugin;
 
 // @public
 export const mount: MountFn;
