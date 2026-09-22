@@ -46,6 +46,7 @@ export async function configure(options: {
         });
     }
 
+    /* eslint-disable-next-line unicorn/prefer-early-return -- for consistency with other options */
     if (options.resetEmulatedMedia) {
         const emulatedMedia = useEmulatedMedia();
         afterEach(() => {
