@@ -64,7 +64,7 @@
     "extends": "@forsakringskassan/semantic-release-config"
   },
   "dependencies": {
-    "@forsakringskassan/cypress-axe": "5.1.5",
+    "@forsakringskassan/cypress-axe": "5.1.6",
     "cypress-html-validate": "9.1.0",
     "deepmerge": "4.3.1",
     "mocha-multi-reporters": "1.5.2"
