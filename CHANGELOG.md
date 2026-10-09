@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.10.1](https://github.com/Forsakringskassan/cypress-config/compare/v1.10.0...v1.10.1) (2026-10-09)
+
+### Bug Fixes
+
+* **deps:** update dependency @forsakringskassan/cypress-axe to v5.1.6 ([a899b8b](https://github.com/Forsakringskassan/cypress-config/commit/a899b8b755d586b28907e5bc5be4dc66b8dedf1c))
+
 ## [1.10.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.9.2...v1.10.0) (2026-09-18)
 
 ### Features
