@@ -53,6 +53,7 @@ const htmlValidateOptions = (): CypressHtmlValidateOptions => {
             ".live-example__example",
         ],
         exclude,
+        filterRelated: true,
     };
 };
 
