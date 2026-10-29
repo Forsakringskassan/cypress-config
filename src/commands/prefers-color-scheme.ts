@@ -25,7 +25,6 @@ declare global {
 
 const emulatedMedia = useEmulatedMedia();
 
-/* eslint-disable-next-line unicorn/no-top-level-side-effects -- cypress commands are added as side-effects */
 Cypress.Commands.add("prefersColorScheme", (value) => {
     emulatedMedia.prefersColorScheme(value);
     const event = "remote:debugger:protocol";
