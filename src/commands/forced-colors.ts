@@ -23,7 +23,6 @@ declare global {
 
 const emulatedMedia = useEmulatedMedia();
 
-/* eslint-disable-next-line unicorn/no-top-level-side-effects -- cypress commands are added as side-effects */
 Cypress.Commands.add("forcedColors", (mode) => {
     emulatedMedia.forcedColors(mode);
     const event = "remote:debugger:protocol";
