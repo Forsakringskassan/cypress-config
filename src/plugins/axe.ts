@@ -1,17 +1,32 @@
 import "cypress";
 import { init as install } from "@forsakringskassan/cypress-axe/plugins";
-import { mergeConfig } from "../utils/merge-config";
+import { getApplicationSelector } from "@forsakringskassan/get-application-slug";
 
-const defaultOptions = {
-    context: {
-        include: [[".code-preview"], ["[data-preview]"], ["[data-cy-root]"]],
-        exclude: [
-            [".calendar__item--selected"],
-            [".file-selector input"],
-            [".wizard-step__header__title"],
-            [".live-example__code"],
-        ],
-    },
+import { mergeConfig } from "../utils/merge-config";
+import { type PackageJson } from "../utils/package-json";
+
+const defaultOptions = (pkg?: PackageJson): object => {
+    const options = {
+        context: {
+            include: [
+                [".code-preview"],
+                ["[data-preview]"],
+                ["[data-cy-root]"],
+            ],
+            exclude: [
+                [".calendar__item--selected"],
+                [".file-selector input"],
+                [".wizard-step__header__title"],
+                [".live-example__code"],
+            ],
+        },
+    };
+
+    if (pkg) {
+        options.context.include.push([getApplicationSelector(pkg.name)]);
+    }
+
+    return options;
 };
 
 /**
@@ -29,7 +44,9 @@ export function axePlugin(
     config: Cypress.PluginConfigOptions,
     userOptions?: object,
 ): Promise<Cypress.PluginConfigOptions> {
-    const options = mergeConfig<object>(defaultOptions, userOptions);
-    config = install(on, config, options);
-    return Promise.resolve(config);
+    const pkg = config.pkg;
+    const options = mergeConfig<object>(defaultOptions(pkg), userOptions);
+    const updatedConfig = install(on, config, options);
+
+    return Promise.resolve(updatedConfig);
 }

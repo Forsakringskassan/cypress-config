@@ -15,8 +15,15 @@ export function axePlugin(on: Cypress.PluginEvents, config: Cypress.PluginConfig
 export type ConfigOptions = Parameters<typeof defineConfig_2>[0];
 
 // @public
-export function defaultConfig(cypressMajor: string | undefined): Readonly<{
+export function defaultConfig(cypressMajor: string | undefined, packageJson: {
+    name: string;
+    [key: string]: unknown;
+}): Readonly<{
     allowCypressEnv?: false;
+    pkg: {
+        [key: string]: unknown;
+        name: string;
+    };
     video: false;
     defaultBrowser: string;
     reporter: string;
@@ -37,7 +44,7 @@ export function defaultConfig(cypressMajor: string | undefined): Readonly<{
 }>;
 
 // @public (undocumented)
-export function defineConfig(_rootDir: string, userConfig?: Omit<ConfigOptions, "component"> & {
+export function defineConfig(rootDir: string, userConfig?: Omit<ConfigOptions, "component"> & {
     component?: Partial<ConfigOptions["component"]>;
 }): Readonly<ConfigOptions>;
 

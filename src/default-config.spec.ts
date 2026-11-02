@@ -3,7 +3,7 @@ import { it } from "node:test";
 import { defaultConfig } from "./default-config.ts";
 
 await it("should disable allowCypressEnv on cypress v15", () => {
-    const result = defaultConfig("15");
+    const result = defaultConfig("15", { name: "package" });
     assert.ok(
         Object.hasOwn(result, "allowCypressEnv"),
         "allowCypressEnv should be defined",
@@ -12,7 +12,7 @@ await it("should disable allowCypressEnv on cypress v15", () => {
 });
 
 await it("should not set allowCypressEnv on cypress v16 and later", () => {
-    const result = defaultConfig("16");
+    const result = defaultConfig("16", { name: "package" });
     assert.ok(
         !Object.hasOwn(result, "allowCypressEnv"),
         "allowCypressEnv should not be defined",
