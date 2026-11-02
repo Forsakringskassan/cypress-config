@@ -1,11 +1,14 @@
 import { createRequire } from "node:module";
 import "cypress";
+import { getApplicationSelector } from "@forsakringskassan/get-application-slug";
 import {
     type ConfigData,
     type CypressHtmlValidateOptions,
 } from "cypress-html-validate";
 import { install } from "cypress-html-validate/plugin";
+
 import { mergeConfig } from "../utils/merge-config";
+import { type PackageJson } from "../utils/package-json";
 
 const require = createRequire(import.meta.url);
 
@@ -42,8 +45,8 @@ const htmlValidateConfig = (): ConfigData => {
     };
 };
 
-const htmlValidateOptions = (): CypressHtmlValidateOptions => {
-    return {
+const htmlValidateOptions = (pkg?: PackageJson): CypressHtmlValidateOptions => {
+    const config = {
         include: [
             /* Cypress component tests */
             "#__cy_vue_root > div",
@@ -55,6 +58,12 @@ const htmlValidateOptions = (): CypressHtmlValidateOptions => {
         exclude,
         filterRelated: true,
     };
+
+    if (pkg) {
+        config.include.push(getApplicationSelector(pkg.name));
+    }
+
+    return config;
 };
 
 /**
@@ -74,8 +83,9 @@ export function htmlValidatePlugin(
     userConfig?: ConfigData,
     userOptions?: CypressHtmlValidateOptions,
 ): Promise<Cypress.PluginConfigOptions> {
+    const pkg = cypressConfig.pkg;
     const config = mergeConfig(htmlValidateConfig(), userConfig);
-    const options = mergeConfig(htmlValidateOptions(), userOptions);
+    const options = mergeConfig(htmlValidateOptions(pkg), userOptions);
     install(on, config, options);
     return Promise.resolve(cypressConfig);
 }

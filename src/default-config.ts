@@ -1,7 +1,5 @@
 import { createRequire } from "node:module";
-import { type defineConfig } from "cypress";
-
-type ConfigOptions = Parameters<typeof defineConfig>[0];
+import type { ConfigOptions } from "./define-config.ts";
 
 const require = createRequire(import.meta.url);
 const isGithub = Boolean(process.env["GITHUB_ACTION"]);
@@ -29,9 +27,14 @@ function hasVersionConfig(
  * @since v1.1.0
  */
 /* eslint-disable-next-line @typescript-eslint/explicit-function-return-type -- we want implicit typing on this function */
-export function defaultConfig(cypressMajor: string | undefined) {
+export function defaultConfig(
+    cypressMajor: string | undefined,
+    packageJson: { name: string; [key: string]: unknown },
+) {
     return Object.freeze({
         ...(hasVersionConfig(cypressMajor) && versionConfig[cypressMajor]),
+
+        pkg: packageJson,
 
         /* disable video recording, it is to slow both on remote machines and on
          * CI/CD testing. */
