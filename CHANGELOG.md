@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.11.0](https://github.com/Forsakringskassan/cypress-config/compare/v1.10.2...v1.11.0) (2026-11-03)
+
+### Features
+
+* append application class to axe and html-validate context ([18002b8](https://github.com/Forsakringskassan/cypress-config/commit/18002b8878a40df6eb3fca0eb83ca2daf6bbd54f))
+
 ## [1.10.2](https://github.com/Forsakringskassan/cypress-config/compare/v1.10.1...v1.10.2) (2026-10-24)
 
 ### Bug Fixes
