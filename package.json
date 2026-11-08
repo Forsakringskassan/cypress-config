@@ -103,7 +103,7 @@
     "npm-pkg-lint": "5.4.1",
     "typescript": "npm:@typescript/typescript6@6.0.2",
     "vite": "8.3.6",
-    "vue": "3.5.44"
+    "vue": "3.5.45"
   },
   "peerDependencies": {
     "@fkui/vue": ">= 6.0.0",
