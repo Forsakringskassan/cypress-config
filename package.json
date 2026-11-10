@@ -98,7 +98,7 @@
     "@vitejs/plugin-vue": "6.0.10",
     "cypress": "16.2.1",
     "esbuild": "0.28.2",
-    "html-validate": "11.18.0",
+    "html-validate": "11.19.0",
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.4.1",
     "typescript": "npm:@typescript/typescript6@6.0.2",
